@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import SnowStorm from 'react-snowstorm';
 import './App.css';
+import Switch from './components/ToggleSwitch';
 
 const SomeText = () => {
   return (
@@ -15,10 +17,38 @@ const addFireEmoji = () => {
 }
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      snowEffect: false
+    };
+  }
+
+  triggerSnowEffect = () => {
+    const { snowEffect } = this.state
+    if (snowEffect) {
+      this.setState({
+        snowEffect: false
+      })
+    } else {
+      this.setState({
+        snowEffect: true
+      })
+    }
+  }
+
   render() {
+    const { snowEffect } = this.state
     return (
       <div className="App">
         <header className="App-header">
+          <div style={{ margin: "2em" }}>
+            <Switch onClick={this.triggerSnowEffect} />
+            <h2>Toggle snow effect</h2>
+          </div>
+          {snowEffect ? <SnowStorm /> : ''}
+        </header>
+        <body className="App-body">
           <SomeText />
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -32,7 +62,7 @@ class App extends Component {
           >
             Learn React
           </a>
-        </header>
+        </body>
       </div>
     );
   }
