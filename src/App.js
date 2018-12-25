@@ -5,10 +5,14 @@ import './App.css';
 const SomeText = () => {
   return (
     <div>
-      <h1>🔥Is Lit Hola!!!🔥</h1>
+      <h1>{addFireEmoji()}Hola!!! Is Lit {addFireEmoji()}</h1>
     </div>
   );
 };
+
+const addFireEmoji = () => {
+  return <span role="img" aria-label="fire">🔥</span>
+}
 
 class App extends Component {
   render() {
