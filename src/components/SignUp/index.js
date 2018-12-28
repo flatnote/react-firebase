@@ -6,7 +6,7 @@ import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 
 const SignUpPage = () => (
-    <div>
+    <div style={{ margin: 'auto', width: '60%' }}>
         <h1>SignUp</h1>
         <SignUpForm />
     </div>
@@ -71,34 +71,46 @@ class SignUpFormBase extends Component {
             username === '';
         return (
             <form onSubmit={this.onSubmit}>
-                <input
-                    name="username"
-                    value={username}
-                    onChange={this.onChange}
-                    type="text"
-                    placeholder="Full Name"
-                />
-                <input
-                    name="email"
-                    value={email}
-                    onChange={this.onChange}
-                    type="text"
-                    placeholder="Email Address"
-                />
-                <input
-                    name="passwordOne"
-                    value={passwordOne}
-                    onChange={this.onChange}
-                    type="password"
-                    placeholder="Password"
-                />
-                <input
-                    name="passwordTwo"
-                    value={passwordTwo}
-                    onChange={this.onChange}
-                    type="password"
-                    placeholder="Confirm Password"
-                />
+                <div className="form-group">
+                    <input
+                        name="username"
+                        value={username}
+                        onChange={this.onChange}
+                        type="text"
+                        placeholder="Full Name"
+                        className="form-control"
+                    />
+                </div>
+                <div className="form-group">
+                    <input
+                        name="email"
+                        value={email}
+                        onChange={this.onChange}
+                        type="text"
+                        placeholder="Email Address"
+                        className="form-control"
+                    />
+                </div>
+                <div className="form-group">
+                    <input
+                        name="passwordOne"
+                        value={passwordOne}
+                        onChange={this.onChange}
+                        type="password"
+                        placeholder="Password"
+                        className="form-control"
+                    />
+                </div>
+                <div className="form-group">
+                    <input
+                        name="passwordTwo"
+                        value={passwordTwo}
+                        onChange={this.onChange}
+                        type="password"
+                        placeholder="Confirm Password"
+                        className="form-control"
+                    />
+                </div>
                 <button disabled={isInvalid} type="submit" className="btn btn-primary">Sign Up</button>
 
                 {error && <p>{error.message}</p>}
