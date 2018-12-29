@@ -49,8 +49,8 @@ class AdminPage extends Component {
     render() {
         const { users, loading } = this.state;
         return (
-            <div>
-                <h1>Admin</h1>
+            <div className="container">
+                <h1>Admin Page</h1>
                 {loading && <div>Loading ...</div>}
 
                 <UserList users={users} />

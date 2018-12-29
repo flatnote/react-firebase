@@ -1,0 +1,59 @@
+/* .sign-in-page {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+} */
+
+.sign-in-form {
+    background-color: rgba(0,0,0,.75);
+    color: white;
+    padding: 3em;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* display: flex; */
+}
+
+.social-login {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.google-btn {
+    background-color: red;
+    color: white;
+}
+
+.facebook-btn {
+    margin-top: 2em;
+}
+
+.vl {
+    border-left: 6px solid green;
+    height: 500px;
+}
+
+@media screen and (min-width: 575px) {
+    .mycontent-left {
+        border-right: 1px dashed #333;
+    }
+
+    .social-login {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .google-btn {
+        margin-top: 2em;
+    }
+
+    .facebook-btn {
+        margin-top: 2em;
+    }
+}

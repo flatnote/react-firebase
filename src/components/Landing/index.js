@@ -3,6 +3,8 @@ import './index.css';
 // import styled, { css } from 'styled-components';
 
 class Landing extends Component {
+    onSubmit = event => {}
+
     render() {
         return (
             <div>
@@ -14,7 +16,7 @@ class Landing extends Component {
                                 <h1 className="mb-5">This is a Landing page!</h1>
                             </div>
                             <div className="col-md-10 col-lg-8 col-xl-7 mx-auto">
-                                <form>
+                                <form onSubmit={this.onSubmit}>
                                     <div className="form-row">
                                         <div className="col-12 col-md-9 mb-2 mb-md-0">
                                             <input type="email" className="form-control form-control-lg" placeholder="Enter your email..." />
