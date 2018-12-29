@@ -17,7 +17,7 @@ const Navigation = () => (
 const NavigationAuth = () => (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
-            <Link to={ROUTES.LANDING} className="navbar-brand"><img src={netflixlogo} className="Nextflix-logo" alt="logo" style={{ width: 70, height: 30 }} /></Link>
+            <Link to={ROUTES.LANDING} className="navbar-brand"><img src={netflixlogo} className="Nextflix-logo" alt="logo" style={{ width: 80, height: 40 }} /></Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>
@@ -44,7 +44,7 @@ const NavigationAuth = () => (
 const NavigationNonAuth = () => (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
-            <Link to={ROUTES.LANDING} className="navbar-brand"><img src={netflixlogo} className="Nextflix-logo" alt="logo" style={{ width: 70, height: 30 }} /></Link>
+            <Link to={ROUTES.LANDING} className="navbar-brand"><img src={netflixlogo} className="Nextflix-logo" alt="logo" style={{ width: 80, height: 40 }} /></Link>
             <Link to={ROUTES.SIGN_IN}>
                 <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
                     Sign In

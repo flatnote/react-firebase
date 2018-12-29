@@ -6,7 +6,7 @@ import { withFirebase } from '../Firebase';
 import * as ROUTES from '../../constants/routes';
 
 const SignUpPage = () => (
-    <div style={{ margin: 'auto', width: '60%' }}>
+    <div style={{ margin: 'auto', width: '80%' }} className="container">
         <h1>SignUp</h1>
         <SignUpForm />
     </div>
