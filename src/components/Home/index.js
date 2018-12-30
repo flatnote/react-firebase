@@ -24,13 +24,13 @@ class HomePage extends Component {
 
 class UserArea extends Component {
   componentDidMount() {
-    console.log(this.props.user.displayName)
+    
   }
 
   render() {
     return (
       <div>
-        <h2>Welcome {this.props.user.displayName} !!{addFireEmoji()}{addFireEmoji()}</h2>
+        <h2>Welcome {this.props.user.username} !!{addFireEmoji()}{addFireEmoji()}</h2>
       </div>
     );
   }
