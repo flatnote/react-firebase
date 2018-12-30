@@ -3,18 +3,19 @@ import { Link } from 'react-router-dom';
 
 import SignOutButton from '../SignOut';
 import * as ROUTES from '../../constants/routes';
+import * as ROLES from '../../constants/roles';
 import { AuthUserContext } from '../Session';
 import netflixlogo from '../img/logo.svg';
 
 const Navigation = () => (
     <div>
         <AuthUserContext.Consumer>
-            {authUser => authUser ? <NavigationAuth /> : <NavigationNonAuth />}
+            {authUser => authUser ? <NavigationAuth authUser={authUser} /> : <NavigationNonAuth />}
         </AuthUserContext.Consumer>
     </div>
 );
 
-const NavigationAuth = () => (
+const NavigationAuth = ({ authUser }) => (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
             <Link to={ROUTES.LANDING} className="navbar-brand"><img src={netflixlogo} className="Nextflix-logo" alt="logo" style={{ width: 80, height: 40 }} /></Link>
@@ -29,9 +30,14 @@ const NavigationAuth = () => (
                     <li className="nav-item dropdown">
                         <Link to={ROUTES.ACCOUNT} className="nav-link">Account</Link>
                     </li>
-                    <li className="nav-item">
+                    {authUser.roles.includes(ROLES.ADMIN) && (
+                        <li className="nav-item">
+                            <Link to={ROUTES.ADMIN} className="nav-link">Admin</Link>
+                        </li>
+                    )}
+                    {/* <li className="nav-item">
                         <Link to={ROUTES.ADMIN} className="nav-link">Admin</Link>
-                    </li>
+                    </li> */}
                 </ul>
                 <SignOutButton className="btn-outline-success my-2 my-sm-0" />
             </div>
