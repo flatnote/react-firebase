@@ -1,5 +1,5 @@
 ## Travis CI Build Status 
-[![Build Status](https://travis-ci.org/Flatnote/ball-bon.svg?branch=master)](https://travis-ci.org/Flatnote/ball-bon)
+[![Build Status](https://travis-ci.org/Flatnote/react-firebase.svg?branch=master)](https://travis-ci.org/Flatnote/react-firebase)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
